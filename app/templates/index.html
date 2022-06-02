@@ -3,16 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>LibreTranslate - Free and Open Source Machine Translation API</title>
+	<title>XXX Translate</title>
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-  <meta name="description" content="Free and Open Source Machine Translation API. 100% self-hosted, offline capable and easy to setup. Run your own API server in just a few minutes.">
+  <meta name="description" content="XXX Translate">
   <meta name="keywords" content="translation,api">
-
-  <meta property="og:title" content="LibreTranslate - Free and Open Source Machine Translation API" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://libretranslate.com" />
-  <meta property="og:image" content="https://user-images.githubusercontent.com/1951843/102724116-32a6df00-42db-11eb-8cc0-129ab39cdfb5.png" />
-  <meta property="og:description" name="description" class="swiftype" content="Free and Open Source Machine Translation API. 100% self-hosted, no limits, no ties to proprietary services. Run your own API server in just a few minutes."/>
+  <meta name="robots" content="no-index, no-follow">
 
 	<script src="{{ url_for('static', filename='js/vue@2.js') }}"></script>
 	<!-- Compiled and minified CSS -->
@@ -22,16 +17,6 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}?v={{ version }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-theme.css') }}" />
 
-	{% if gaId %}
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id={{ gaId }}"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', '{{ gaId }}');
-	</script>
-	{% endif %}
 </head>
 
 <body class="white">

@@ -1,7 +1,7 @@
 FROM python:3.8.12-slim-bullseye
 
 ARG with_models=false
-ARG models=
+ARG models=""
 
 WORKDIR /app
 
@@ -16,16 +16,6 @@ RUN pip install --upgrade pip
 COPY . .
 
 
-RUN if [ "$with_models" = "true" ]; then  \
-        # install only the dependencies first
-        pip install -e .;  \
-        # initialize the language models
-        if [ ! -z "$models" ]; then \
-                  ./install_models.py --load_only_lang_codes "$models";   \
-        else \
-                  ./install_models.py;  \
-        fi \
-    fi
 # Install package from source code
 RUN pip install . \
   && pip cache purge

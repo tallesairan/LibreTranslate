@@ -11,7 +11,7 @@ def load_languages():
 
     if __languages is None or len(__languages) == 0:
         __languages = translate.get_installed_languages()
-
+        print(__languages)
     return __languages
 
 def detect_languages(text):
